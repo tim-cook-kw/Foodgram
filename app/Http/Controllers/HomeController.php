@@ -47,6 +47,12 @@ class HomeController extends Controller
         return view('recipe.singlerecipe');
     }
 
+    public function singleblog()
+    {
+        return view('home.singleblog');
+    }
+
+
 
 
     /**
