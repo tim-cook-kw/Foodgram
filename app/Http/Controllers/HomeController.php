@@ -36,6 +36,18 @@ class HomeController extends Controller
         return view('home.blog');
     }
 
+    public function recipe()
+    {
+        return view('recipe.recipe');
+    }
+
+
+    public function singlerecipe()
+    {
+        return view('recipe.singlerecipe');
+    }
+
+
 
     /**
      * Show the form for creating a new resource.
