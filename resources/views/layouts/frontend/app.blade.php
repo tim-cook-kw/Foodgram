@@ -31,6 +31,10 @@
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/slick.css') }}"/>
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/slick-theme.css') }}"/>
 
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/priority-nav-core.css') }} ">
+    
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Pathway+Gothic+One|Roboto:100,300,400" rel="stylesheet">
+
 <!--selectric stylesheet-->
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/selectric.css') }}"/>
     @stack('css')
@@ -285,6 +289,12 @@
     <script src="{{ asset('assets/frontend/js/slick.min.js') }}"></script>
     <script src="{{ asset('assets/frontend/js/wow.js') }}"></script>
     <script src="{{ asset('assets/frontend/js/custom.js') }}"></script>
+
+    <script src="{{ asset('assets/frontend/js/jquery.min.js') }} "></script>
+    <script src="{{ asset('assets/frontend/js/jquery.resizeimagetoparent.min.js') }} "></script>
+    <script src="{{ asset('assets/frontend/js/jquery.dotdotdot.min.js') }}"></script>
+    <script src="{{ asset('assets/frontend/js/priority-nav.js') }} "></script>
+    <script src="{{ asset('assets/frontend/js/common.js') }} "></script>
 
 
 @stack('js')

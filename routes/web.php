@@ -24,3 +24,7 @@ Route::get('register', 'HomeController@register') ->name('register.index');
 Route::get('homeindex', 'HomeController@index') ->name('home.index');
 
 Route::get('homeblog', 'HomeController@blog') ->name('blog.index');
+
+Route::get('homerecipe', 'HomeController@recipe') ->name('recipe.index');
+
+Route::get('homesinglerecipe', 'HomeController@singlerecipe') ->name('singlerecipe.index');
