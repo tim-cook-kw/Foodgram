@@ -30,7 +30,7 @@
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="margin-left: 190px">
                             <div class="footer-box-a">
                                 <h3>About Us</h3>
-                                <p>Aenean commodo ligula eget dolor aenean massa. Cum sociis nat penatibu set magnis dis parturient montes.</p>
+                                <p>Foodgram is a website to share recipe ideas and cooking tips. Because we believe that cooking is the key to a happier and healthier life . Foodgram can help you By solving the issues related to everyday cooking. Find your favorite food with us. </p>
                                 <ul class="socials-box footer-socials pull-left">
                                     <li>
                                         <a href="#">
@@ -81,17 +81,17 @@
                                 <h3>Contact Us</h3>
                                 <p>
                                     <i class="fa fa-map-signs" aria-hidden="true"></i>
-                                    <span>6 E Esplanade, St Albans VIC 3021, Australia</span>
+                                    <span>Jln Jendral Sudirman No.1, Jakarta</span>
                                 </p>
                                 <p>
                                     <i class="fa fa-mobile" aria-hidden="true"></i>
                                     <span>
-									+91 80005 89080 
+									+62 838 2330 2300 
 								</span>
                                 </p>
                                 <p>
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <span><a href="#">support@foodfunday.com</a></span>
+                                    <span><a href="#">rhhezkyillma@gmail.com</a></span>
                                 </p>
                             </div>
                             <!-- end footer-box-c -->

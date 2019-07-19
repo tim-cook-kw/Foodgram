@@ -122,7 +122,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h2 class="block-title text-center">
-					Timeline	
+					Blog	
 				</h2>
                     <div class="blog-box clearfix">
                         <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
@@ -245,7 +245,7 @@
                     <!-- end blog-box -->
 
                     <div class="blog-btn-v">
-                        <a class="hvr-underline-from-center" href="#">View Timeline</a>
+                        <a class="hvr-underline-from-center" href="#">View Blog</a>
                     </div>
 
                 </div>
