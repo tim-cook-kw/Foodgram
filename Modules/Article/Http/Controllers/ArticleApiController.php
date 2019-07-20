@@ -39,13 +39,26 @@ class ArticleApiController extends Controller
      */
     public function store(Request $request)
     {
-        $articleObject = new ArticleModel();
-        $articleObject->title = $request->judul;
-        $articleObject->description = $request->description;
-        $articleObject->id_category = $request->category;
-        $articleObject->slug = $request->slug;
-        $articleObject->created_by = '1';
-        $articleObject->save();
+        if ($request->hasFile('image')) {
+            $imagepath= $request->file('image');
+            $articleObject = new ArticleModel();
+            $articleObject->title = $request->judul;
+            $articleObject->description = $request->description;
+            $articleObject->id_category = $request->category;
+            $articleObject->slug = $request->slug;
+            $articleObject->created_by = '1';
+            $articleObject->image =  'imagearticle/'.$imagepath->getClientOriginalName();
+            $path = $request->file('image')->storeAs('imagearticle', $imagepath->getClientOriginalName());
+            $articleObject->save();
+        }else{
+            $articleObject = new ArticleModel();
+            $articleObject->title = $request->judul;
+            $articleObject->description = $request->description;
+            $articleObject->id_category = $request->category;
+            $articleObject->slug = $request->slug;
+            $articleObject->created_by = '1';
+            $articleObject->save();
+        }
     }
 
     /**
@@ -77,13 +90,26 @@ class ArticleApiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $articleObject = ArticleModel::find($id);
-        $articleObject->title = $request->judul;
-        $articleObject->description = $request->description;
-        $articleObject->id_category = $request->category;
-        $articleObject->slug = $request->slug;
-        $articleObject->created_by = '1';
-        $articleObject->save();
+        if ($request->hasFile('image')) {
+            $imagepath= $request->file('image');
+            $articleObject = ArticleModel::find($id);
+            $articleObject->title = $request->judul;
+            $articleObject->description = $request->description;
+            $articleObject->id_category = $request->category;
+            $articleObject->slug = $request->slug;
+            $articleObject->created_by = '1';
+            $articleObject->image =  'imagearticle/'.$imagepath->getClientOriginalName();
+            $path = $request->file('image')->storeAs('imagearticle', $imagepath->getClientOriginalName());
+            $articleObject->save();
+        }else{
+            $articleObject = ArticleModel::find($id);
+            $articleObject->title = $request->judul;
+            $articleObject->description = $request->description;
+            $articleObject->id_category = $request->category;
+            $articleObject->slug = $request->slug;
+            $articleObject->created_by = '1';
+            $articleObject->save();
+        }
     }
 
     /**

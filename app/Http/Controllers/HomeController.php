@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-
+use Modules\Category\Entities\CategoryModel;
 class HomeController extends Controller
 {
     /**
@@ -33,7 +33,18 @@ class HomeController extends Controller
 
     public function blog()
     {
-        return view('home.blog');
+        $dataarticle = DB::table('article')
+            ->join('users', 'users.id', '=', 'article.created_by')
+            ->select('article.*', 'users.name')
+            ->paginate(3);
+        $latestnews = DB::table('article')
+                ->join('users', 'users.id', '=', 'article.created_by')
+                ->select('article.*', 'users.name')
+                ->orderBy('created_at')
+                ->limit(3)
+                ->get();
+        $kategori = CategoryModel::all();
+        return view('home.blog',['articledata' => $dataarticle,'latestnewsdata' => $latestnews, 'kategoridata' => $kategori]);
     }
 
     public function recipe()

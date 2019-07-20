@@ -20,7 +20,7 @@
                     <br>
                     <br>
                     <div id="myModal" class="modal fade" role="dialog">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog modal-lg">
                         
                             <!-- Modal content-->
                             <div class="modal-content">
@@ -30,32 +30,44 @@
                                 </div>
                                 <form id="formarticle">
                                     <div class="modal-body">
-                                        <label for="email_address">Nama Category</label>
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <select class="form-control" name="category" id="category">
-                                                    @foreach ($category as $item)
-                                                        <option value="{{$item->id}}">{{$item->name}}</option>
-                                                    @endforeach
-                                                </select>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label for="email_address">Nama Category</label>
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <select class="form-control" name="category" id="category">
+                                                            @foreach ($category as $item)
+                                                                <option value="{{$item->id}}">{{$item->name}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <label for="slug">Slug</label>
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <input type="text" class="form-control" placeholder="Input Slug..." name="slug" id="slug">
+                                                    </div>
+                                                </div>
+                                                <label for="slug">Gambar</label>
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <input type="file" class="form-control" placeholder="Input Slug..." name="image" id="image">
+                                                    </div>
+                                                </div>
+                                                <label for="slug">Judul</label>
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <input type="text" class="form-control" placeholder="Input Slug..." name="judul" id="judul">
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <label for="slug">Slug</label>
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Input Slug..." name="slug" id="slug">
-                                            </div>
-                                        </div>
-                                        <label for="slug">Judul</label>
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Input Slug..." name="judul" id="judul">
-                                            </div>
-                                        </div>
-                                        <label for="image">description</label>
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                               <textarea class="form-control" id="description" name="description"></textarea>
+                                            <div class="col-md-8">
+                                                <label for="image">description</label>
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                    <textarea class="form-control" id="description" name="description"></textarea>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -78,33 +90,45 @@
                                 </div>
                                 <form id="formarticleedit">
                                     <div class="modal-body">
-                                        <label for="email_address">Nama Category</label>
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <select class="form-control" name="categoryedit" id="categoryedit">
-                                                    @foreach ($category as $item)
-                                                        <option value="{{$item->id}}">{{$item->name}}</option>
-                                                    @endforeach
-                                                </select>
-                                                <input type="hidden" id="idarticle">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label for="email_address">Nama Category</label>
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <select class="form-control" name="categoryedit" id="categoryedit">
+                                                            @foreach ($category as $item)
+                                                                <option value="{{$item->id}}">{{$item->name}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                        <input type="hidden" id="idarticle">
+                                                    </div>
+                                                </div>
+                                                <label for="slug">Slug</label>
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <input type="text" class="form-control" placeholder="Input Slug..." name="slugedit" id="slugedit">
+                                                    </div>
+                                                </div>
+                                                <label for="slug">Gambar</label>
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <input type="file" class="form-control" placeholder="Input Slug..." name="imageedit" id="imageedit">
+                                                    </div>
+                                                </div>
+                                                <label for="slug">Judul</label>
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <input type="text" class="form-control" placeholder="Input Slug..." name="juduledit" id="juduledit">
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <label for="slug">Slug</label>
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Input Slug..." name="slugedit" id="slugedit">
-                                            </div>
-                                        </div>
-                                        <label for="slug">Judul</label>
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <input type="text" class="form-control" placeholder="Input judul..." name="juduledit" id="juduledit">
-                                            </div>
-                                        </div>
-                                        <label for="image">description</label>
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <textarea class="form-control" name="descriptionedit" id="descriptionedit"></textarea>
+                                            <div class="col-md-8">
+                                                <label for="image">description</label>
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                    <textarea class="form-control" id="descriptionedit" name="descriptionedit"></textarea>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -195,6 +219,14 @@
                     ]
                 });
         $('document').ready(function(){
+            new FroalaEditor('#description', {
+                heightMin: 100,
+                heightMax: 300
+            })
+            new FroalaEditor('#descriptionedit', {
+                heightMin: 100,
+                heightMax: 300
+            })
             $('form[id="formarticle"]').validate({
                 rules: {
                     judul: 'required',
@@ -209,6 +241,7 @@
                 submitHandler: function(form) {
                     var data;
                     data = new FormData();
+                    data.append( 'image', $( '#image' )[0].files[0]);
                     data.append( 'judul', $( '#judul' ).val());
                     data.append( 'description', $( '#description' ).val());
                     data.append( 'slug', $( '#slug' ).val());
@@ -240,7 +273,6 @@
                 rules: {
                     name: 'required',
                     slug: 'required',
-                    image: 'required',
 
                 },
                 messages: {
@@ -252,6 +284,7 @@
                     data = new FormData();
                     var id = $('#idarticle').val();
                     data.append('_method', 'PUT');
+                    data.append( 'image', $( '#imageedit' )[0].files[0]);
                     data.append( 'judul', $( '#juduledit' ).val());
                     data.append( 'slug', $( '#slugedit' ).val());
                     data.append( 'description', $( '#descriptionedit' ).val());
