@@ -260,8 +260,8 @@
                                                 <div class="main-content-agile fix-index">
                                                 <div class="sub-main-w3">   
                                                     <h2>Foodgram Sign In</h2>
-                                                    <form action="#" method="post">
-
+                                                    <form action="login" method="post">
+                                                        {{ csrf_field() }}
                                                         <div class="input-group form-group" style="margin-top: 30px">
                                                             <div class="input-group-prepend">
                                                                 <span class="input-group-text"><i class="fa fa-envelope fa"></i></span>
@@ -287,7 +287,7 @@
                                                             <div class="clear"></div>
                                                         <input type="submit" value="Sign in">
                                                          <div class="checkbox" style="margin-top: 25px;">
-                                                                Don't have an account?<a href="#"><u>Sign Up</u></a>
+                                                            Don't have an account?<a href="{{route('register')}}"><u>Sign Up</u></a>
                                                             </div> 
                                                     </form>
                                                 </div>

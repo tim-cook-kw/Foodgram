@@ -29,3 +29,6 @@ Route::get('homesingleblog', 'HomeController@singleblog') ->name('singleblog.ind
 Route::get('homerecipe', 'HomeController@recipe') ->name('recipe.index');
 
 Route::get('homesinglerecipe', 'HomeController@singlerecipe') ->name('singlerecipe.index');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
