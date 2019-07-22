@@ -46,6 +46,12 @@
                                                 <input type="text" class="form-control" placeholder="Input Slug..." name="slug" id="slug">
                                             </div>
                                         </div>
+                                        <label for="slug">Gambar</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="file" class="form-control" placeholder="Input Slug..." name="image" id="image">
+                                            </div>
+                                        </div>
                                         <label for="slug">Judul</label>
                                         <div class="form-group">
                                             <div class="form-line">
@@ -93,6 +99,12 @@
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <input type="text" class="form-control" placeholder="Input Slug..." name="slugedit" id="slugedit">
+                                            </div>
+                                        </div>
+                                        <label for="slug">Gambar</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="file" class="form-control" placeholder="Input Slug..." name="imageedit" id="imageedit">
                                             </div>
                                         </div>
                                         <label for="slug">Judul</label>
@@ -213,6 +225,7 @@
                     data.append( 'description', $( '#description' ).val());
                     data.append( 'slug', $( '#slug' ).val());
                     data.append( 'category', $( '#category' ).val());
+                    data.append( 'image', $( '#image' )[0].files[0]);
                     $.ajax({
                         url:'/api/article',
                         method:'POST',
@@ -228,6 +241,7 @@
                                     $( '#judul' ).val('');
                                     $( '#description' ).val('');
                                     $( '#slug' ).val('');
+                                    $('#image').val('');
                                     $( '#category' ).val('');
                                     $('#myModal').modal('toggle');
                                 })
@@ -256,6 +270,7 @@
                     data.append( 'slug', $( '#slugedit' ).val());
                     data.append( 'description', $( '#descriptionedit' ).val());
                     data.append( 'category', $( '#categoryedit' ).val());
+                    data.append( 'image', $( '#imageedit' )[0].files[0]);
                     $.ajax({
                         url:'/api/article/'+id,
                         method:'POST',
@@ -272,6 +287,7 @@
                                     $( '#descriptionedit' ).val('');
                                     $( '#slugedit' ).val('');
                                     $( '#categoryedit' ).val('');
+                                    $('#imageedit').val('');
                                     $('#modals2').modal('toggle');
                                 })
                                 table.ajax.reload();

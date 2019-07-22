@@ -20,8 +20,8 @@
                            </div>
                            <div id="navbar" class="navbar-collapse collapse">
                                <ul class="nav navbar-nav navbar-right">
-                                   <li class="active"><a href="index.html">Home</a></li>
-                                   <li><a href="blog.html">Blog</a></li>
+                                   <li class="{{ Request::is('homeindex') ? 'active' : '' }}"><a href="{{route('home.index')}}">Home</a></li>
+                                   <li class="{{ Request::is('homeblog') ? 'active' : '' }}"><a href="{{route('blog.index')}}">Blog</a></li>
                                    <li><a href="blog.html">Recipes</a></li>
                                    <li><a href="#about">About us</a></li>  
                                    <li><a href="#footer">Contact us</a></li>
