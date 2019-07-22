@@ -16,6 +16,45 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
+    public function login()
+    {
+        return view('auth.login');
+    }
+
+    public function register()
+    {
+        return view('auth.register');
+    }
+    
+    public function index()
+    {
+        return view('home.index');
+    }
+
+    public function blog()
+    {
+        return view('home.blog');
+    }
+
+    public function recipe()
+    {
+        return view('recipe.recipe');
+    }
+
+
+    public function singlerecipe()
+    {
+        return view('recipe.singlerecipe');
+    }
+
+    public function singleblog()
+    {
+        return view('home.singleblog');
+    }
+
+
+
+
     /**
      * Show the application dashboard.
      *

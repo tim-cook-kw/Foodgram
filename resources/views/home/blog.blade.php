@@ -91,33 +91,146 @@
 <div class="row">
 <div class="col-md-8 col-lg-9">
     <!--single post-->
-    @foreach($articledata as $item)
-        <article class="post-single">
-            <div class="post-visuals">
-                <a href="#">
-                    <img src="{{ asset($item->image) }}" alt="image"/>
-                </a>
-            </div>
-            <div class="post-contents">
-                <div class="post-contents-inner">
-                    <h2><a href="#">{{$item->title}}</a></h2>
-                    <ul class="news-post-meta post-meta">
-                        <li class="calendar">{{$item->created_at}}</li>
+    <article class="post-single">
+        <div class="post-visuals">
+            <a href="#">
+                <img src="{{ asset('assets/frontend/images/temp-images/post-image-1.jpg') }}" alt="image"/>
+            </a>
+        </div>
+        <div class="post-contents">
+            <div class="post-contents-inner">
+                <h2><a href="#">pasto pizza with fillas cheese toppings</a></h2>
+                <ul class="news-post-meta post-meta">
+                    <li class="calendar">23/10/2015</li>
 
-                        <li class="author"><a href="#">{{$item->name}}</a></li>
+                    <li class="author"><a href="#">John Doe</a></li>
 
-                        <li class="comments"><a href="#">12 Comments</a></li>
-                    </ul>
-                    <p>
-                        {!! $item->description!!}
-                    </p>
-                    <a class="read-more-bordered" href="#">Read More</a>
-                </div>
+                    <li class="comments"><a href="#">12 Comments</a></li>
+                </ul>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu vulputate arcu. Fusce consectetur varius nisi, in maximus eros egestas sed. Proin non purus erat. Proin sed mauris id metus pulvinar pretium. Etiam tristique metus lorem, scelerisque pharetra dui blandit sit amet
+                </p>
+                <a class="read-more-bordered" href="#">Read More</a>
             </div>
-        </article>
-    @endforeach
+        </div>
+    </article>
     <!--single post-->
-        {{$articledata->links()}}
+
+    <!--single post-->
+    <article class="post-single">
+        <div class="post-visuals">
+            <div class="wrapper-post-slider">
+                <div class="post-slider">
+                    <div>
+                        <a href="#">
+                            <img src="{{ asset('assets/frontend/images/temp-images/post-image-2.jpg') }}" alt="image"/>
+                        </a>
+                    </div>
+                   <!--  <div>
+                        <a href="#">
+                            <img src="images/temp-images/post-image-2.jpg" alt="image"/>
+                        </a>
+                    </div> -->
+                </div>
+              <!--   <span class="arrow-nav left-arrow"><i class="fa fa-angle-left"></i></span>
+                <span class="arrow-nav right-arrow"><i class="fa fa-angle-right"></i></span> -->
+            </div>
+        </div>
+        <div class="post-contents">
+            <div class="post-contents-inner">
+                <h2><a href="#">pasto pizza with fillas cheese toppings</a></h2>
+                <ul class="news-post-meta post-meta">
+                    <li class="calendar">23/10/2015</li>
+
+                    <li class="author"><a href="#">John Doe</a></li>
+
+                    <li class="comments"><a href="#">12 Comments</a></li>
+                </ul>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu vulputate arcu. Fusce consectetur varius nisi, in maximus eros egestas sed. Proin non purus erat. Proin sed mauris id metus pulvinar pretium. Etiam tristique metus lorem, scelerisque pharetra dui blandit sit amet
+                </p>
+                <a class="read-more-bordered" href="#">Read More</a>
+            </div>
+        </div>
+    </article>
+    <!--single post-->
+
+    <!--single post-->
+    <article class="post-single">
+        <div class="post-contents">
+            <div class="post-contents-inner">
+                <h2><a href="#">pasto pizza with fillas cheese toppings</a></h2>
+                <ul class="news-post-meta post-meta">
+                    <li class="calendar">23/10/2015</li>
+
+                    <li class="author"><a href="#">John Doe</a></li>
+
+                    <li class="comments"><a href="#">12 Comments</a></li>
+                </ul>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu vulputate arcu. Fusce consectetur varius nisi, in maximus eros egestas sed. Proin non purus erat. Proin sed mauris id metus pulvinar pretium. Etiam tristique metus lorem, scelerisque pharetra dui blandit sit amet
+                </p>
+                <a class="read-more-bordered" href="#">Read More</a>
+            </div>
+        </div>
+    </article>
+    <!--single post-->
+
+    <!--single post-->
+    <article class="post-single">
+
+        <div class="post-contents">
+            <div class="post-contents-inner">
+                <div class="audio-container">
+                    <audio src="audio/very_romantic_piano.mp3" controls="controls"></audio>
+                </div>
+
+                <h2><a href="#">pasto pizza with fillas cheese toppings</a></h2>
+                <ul class="news-post-meta post-meta">
+                    <li class="calendar">23/10/2015</li>
+
+                    <li class="author"><a href="#">John Doe</a></li>
+
+                    <li class="comments"><a href="#">12 Comments</a></li>
+                </ul>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu vulputate arcu. Fusce consectetur varius nisi, in maximus eros egestas sed. Proin non purus erat. Proin sed mauris id metus pulvinar pretium. Etiam tristique metus lorem, scelerisque pharetra dui blandit sit amet
+                </p>
+                <a class="read-more-bordered" href="#">Read More</a>
+            </div>
+        </div>
+    </article>
+    <!--single post-->
+
+
+    <!--single post-->
+    <div class="post-single post-quotes">
+
+        <div class="post-contents">
+            <div class="post-contents-inner">
+                <div class="quote-mark">
+                    <i class="fa fa-quote-left"></i>
+                </div>
+                <p>
+                    A man can live and be healthy without killing animals for food; therefore, if he eats meat, he participates in taking animal life merely for the sake of his appetite.
+                </p>
+                <span class="quote-writer">-leotolsty</span>
+                <ul class="news-post-meta post-meta">
+                    <li class="calendar">23/10/2015</li>
+
+                    <li class="author"><a href="#">John Doe</a></li>
+
+                    <li class="comments"><a href="#">12 Comments</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--single post-->
+    <ul class="page-nav" style="margin-bottom: 100px">
+        <li class="current"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+    </ul>
 </div>
 <div class="col-md-4 col-lg-3">
 
@@ -140,34 +253,99 @@
             <div class="widget category-widget">
                 <h2>Categories</h2>
                 <ul>
-                    @foreach ($kategoridata as $item)
-                        <li><a href="#">{{$item->name}}</a></li>
-                    @endforeach
+                    <li><a href="#">good dishes</a></li>
+                    <li><a href="#">seasonal eats</a></li>
+                    <li><a href="#">recipes</a></li>
+                    <li><a href="#">potato</a></li>
                 </ul>
             </div>
             <!--widget category ends-->
+
+            <!-- widget archives-->
+            <div class="widget archives-widget">
+                <h2>Archives</h2>
+                <ul>
+                    <li><a href="#">feb 2015</a> <span>(25)</span></li>
+                    <li><a href="#">jan 2015</a> <span>(37)</span></li>
+                    <li><a href="#">dec 2014</a> <span>(56)</span></li>
+                    <li><a href="#">nov 2014</a> <span>(48)</span></li>
+                </ul>
+            </div>
+
+            <!--widget archives ends-->
 
             <!--latest news widget-->
             <div class="widget latest-news-widget">
                 <h2>Latest News</h2>
                 <ul>
-                    @foreach ($latestnewsdata as $item)
-                        <li>
-                            <div class="thumb">
-                                <a href="#">
-                                    <img src="{{ asset($item->image) }}" alt="thumbnail"/>
-                                </a>
-                            </div>
-                            <div class="detail">
-                                <a href="#">{{$item->title}}</a>
-                                <span class="post-date">{{$item->created_at}}</span>
-                            </div>
-                        </li>
-                    @endforeach
+                    <li>
+                        <div class="thumb">
+                            <a href="#">
+                                <img src="{{ asset('assets/frontend/images/temp-images/widget-thumbnail.jpg') }}" alt="thumbnail"/>
+                            </a>
+                        </div>
+                        <div class="detail">
+                            <a href="#">Pimento Cheese Potato Skins</a>
+                            <span class="post-date">March 21,2015</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="thumb">
+                            <a href="#">
+                                <img src="{{ asset('assets/frontend/images/temp-images/widget-thumbnail.jpg') }}" alt="thumbnail"/>
+                            </a>
+                        </div>
+                        <div class="detail">
+                            <a href="#">Pimento Cheese Potato Skins</a>
+                            <span class="post-date">March 21,2015</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="thumb">
+                            <a href="#">
+                                <img src="{{ asset('assets/frontend/images/temp-images/widget-thumbnail.jpg') }}" alt="thumbnail"/>
+                            </a>
+                        </div>
+                        <div class="detail">
+                            <a href="#">Pimento Cheese Potato Skins</a>
+                            <span class="post-date">March 21,2015</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="thumb">
+                            <a href="#">
+                                <img src="{{ asset('assets/frontend/images/temp-images/widget-thumbnail.jpg') }}" alt="thumbnail"/>
+                            </a>
+                        </div>
+                        <div class="detail">
+                            <a href="#">Pimento Cheese Potato Skins</a>
+                            <span class="post-date">March 21,2015</span>
+                        </div>
+                    </li>
+
                 </ul>
             </div>
             <!--latest news widget ends-->
 
+            <!--tags widget-->
+            <div class="widget tags-widget">
+                <h2>Tags</h2>
+                <ul>
+                    <li><a href="#">loren</a><li>
+                    <li><a href="#">food</a><li>
+                    <li><a href="#">chicken</a><li>
+                    <li><a href="#">dolor</a><li>
+                    <li><a href="#">amet</a><li>
+                    <li><a href="#">fusicon</a><li>
+                    <li><a href="#">corn</a><li>
+                    <li><a href="#">hot chicken</a><li>
+                    <li><a href="#">lorem</a><li>
+                </ul>
+            </div>
+            <!--tags widget ends-->
 
         </div>
     </aside>
