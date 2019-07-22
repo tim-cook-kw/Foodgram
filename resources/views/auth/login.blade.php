@@ -262,22 +262,16 @@
                                                     <h2>Foodgram Sign In</h2>
                                                     <form action="login" method="post">
                                                         {{ csrf_field() }}
-                                                        <div class="input-group form-group" style="margin-top: 30px">
-                                                            <div class="input-group-prepend">
+                                                            <div class="input-group-prepend" style="margin-top: 30px">
                                                                 <span class="input-group-text"><i class="fa fa-envelope fa"></i></span>
                                                                   <input style="width: 344px" placeholder="Email" name="mail" type="email" required=""> 
                                                             </div>
-                                                               
-                                                        </div>
-                                                                                            
-                                                        
-                                                        <div class="input-group form-group" style="margin-top: 30px">
-                                                            <div class="input-group-prepend">
+                                          
+                                                            <div class="input-group-prepend" style="margin-top: 30px">
                                                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                                                                   <input  style="width: 344px" placeholder="Password" name="Password" type="password" required="">
                                                             </div>
-                                                               
-                                                        </div>
+                                                       
 
                                                         <label class="anim" style="margin-top: 20px; margin-left: 1px; margin-right: 1px">
                                                         <input type="checkbox" class="checkbox">
