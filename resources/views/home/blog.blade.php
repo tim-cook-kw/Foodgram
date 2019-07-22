@@ -91,76 +91,32 @@
 <div class="row">
 <div class="col-md-8 col-lg-9">
     <!--single post-->
-    <article class="post-single">
-        <div class="post-visuals">
-            <a href="#">
-                <img src="{{ asset('assets/frontend/images/temp-images/post-image-1.jpg') }}" alt="image"/>
-            </a>
-        </div>
-        <div class="post-contents">
-            <div class="post-contents-inner">
-                <h2><a href="#">pasto pizza with fillas cheese toppings</a></h2>
-                <ul class="news-post-meta post-meta">
-                    <li class="calendar">23/10/2015</li>
-
-                    <li class="author"><a href="#">John Doe</a></li>
-
-                    <li class="comments"><a href="#">12 Comments</a></li>
-                </ul>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu vulputate arcu. Fusce consectetur varius nisi, in maximus eros egestas sed. Proin non purus erat. Proin sed mauris id metus pulvinar pretium. Etiam tristique metus lorem, scelerisque pharetra dui blandit sit amet
-                </p>
-                <a class="read-more-bordered" href="#">Read More</a>
+    @foreach ($article as $item)
+        <article class="post-single">
+            <div class="post-visuals">
+                <a href="#">
+                    <img src="{{ asset($item->image) }}" alt="image"/>
+                </a>
             </div>
-        </div>
-    </article>
-    <!--single post-->
-
-    <!--single post-->
-    <article class="post-single">
-        <div class="post-visuals">
-            <div class="wrapper-post-slider">
-                <div class="post-slider">
-                    <div>
-                        <a href="#">
-                            <img src="{{ asset('assets/frontend/images/temp-images/post-image-2.jpg') }}" alt="image"/>
-                        </a>
-                    </div>
-                   <!--  <div>
-                        <a href="#">
-                            <img src="images/temp-images/post-image-2.jpg" alt="image"/>
-                        </a>
-                    </div> -->
+            <div class="post-contents">
+                <div class="post-contents-inner">
+                    <h2><a href="#">{{$item->title}}</a></h2>
+                    <ul class="news-post-meta post-meta">
+                        <li class="calendar">{{$item->created_at}}</li>
+    
+                        <li class="author"><a href="#">{{$item->name}}</a></li>
+    
+                        <li class="comments"><a href="#">12 Comments</a></li>
+                    </ul>
+                    <p>
+                       {{$item->description}}
+                    </p>
+                    <a class="read-more-bordered" href="#">Read More</a>
                 </div>
-              <!--   <span class="arrow-nav left-arrow"><i class="fa fa-angle-left"></i></span>
-                <span class="arrow-nav right-arrow"><i class="fa fa-angle-right"></i></span> -->
             </div>
-        </div>
-        <div class="post-contents">
-            <div class="post-contents-inner">
-                <h2><a href="#">pasto pizza with fillas cheese toppings</a></h2>
-                <ul class="news-post-meta post-meta">
-                    <li class="calendar">23/10/2015</li>
-
-                    <li class="author"><a href="#">John Doe</a></li>
-
-                    <li class="comments"><a href="#">12 Comments</a></li>
-                </ul>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu vulputate arcu. Fusce consectetur varius nisi, in maximus eros egestas sed. Proin non purus erat. Proin sed mauris id metus pulvinar pretium. Etiam tristique metus lorem, scelerisque pharetra dui blandit sit amet
-                </p>
-                <a class="read-more-bordered" href="#">Read More</a>
-            </div>
-        </div>
-    </article>
-    <!--single post-->
-
- 
-    <ul class="page-nav" style="margin-bottom: 100px">
-        <li class="current"><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-    </ul>
+        </article>
+    @endforeach
+    {{ $article->links() }}
 </div>
 <div class="col-md-4 col-lg-3">
 

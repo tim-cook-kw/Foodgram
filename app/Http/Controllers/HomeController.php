@@ -35,7 +35,7 @@ class HomeController extends Controller
     public function blog()
     {
 
-        $article = DB::table('article')
+        $articledata = DB::table('article')
                 ->join('users', 'users.id', '=', 'article.created_by')
                 ->select('article.*', 'users.name')
                 ->paginate(3);
@@ -43,10 +43,10 @@ class HomeController extends Controller
                 ->join('users', 'users.id', '=', 'article.created_by')
                 ->select('article.*', 'users.name')
                 ->orderBy('created_at')
-                ->limit(3)
+                ->limit(1)
                 ->get();
         $categorydata = CategoryModel::all();
-        return view('home.blog',['article' => $article,'category'=>$categorydata,'latestnews' => $latestnewsdata]);
+        return view('home.blog',['article' => $articledata,'category'=>$categorydata,'latestnews' => $latestnewsdata]);
     }
 
     public function recipe()
