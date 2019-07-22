@@ -123,4 +123,8 @@ class ArticleApiController extends Controller
         $articleObject = ArticleModel::find($id);
         $articleObject->delete();
     }
+    public function findarticle($id){
+        $articleObject = ArticleModel::where('id_category',$id)->get();
+        return $articleObject;
+    }
 }
