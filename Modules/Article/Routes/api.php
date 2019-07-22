@@ -17,3 +17,4 @@ Route::middleware('auth:api')->get('/article', function (Request $request) {
     return $request->user();
 });
 Route::resource('article','ArticleApiController');
+Route::get('findarticle/{id}','ArticleApiController@findarticle');
