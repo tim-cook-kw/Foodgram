@@ -265,7 +265,7 @@
                                                         <div class="input-group form-group" style="margin-top: 30px">
                                                             <div class="input-group-prepend">
                                                                 <span class="input-group-text"><i class="fa fa-envelope fa"></i></span>
-                                                                  <input style="width: 344px" placeholder="Email" name="email" type="email" required=""> 
+                                                                  <input style="width: 344px" placeholder="Email" name="mail" type="email" required=""> 
                                                             </div>
                                                                
                                                         </div>
@@ -274,7 +274,7 @@
                                                         <div class="input-group form-group" style="margin-top: 30px">
                                                             <div class="input-group-prepend">
                                                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
-                                                                  <input  style="width: 344px" placeholder="Password" name=password" type="password" required="">
+                                                                  <input  style="width: 344px" placeholder="Password" name="Password" type="password" required="">
                                                             </div>
                                                                
                                                         </div>
