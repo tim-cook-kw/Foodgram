@@ -43,7 +43,7 @@ class HomeController extends Controller
                 ->join('users', 'users.id', '=', 'article.created_by')
                 ->select('article.*', 'users.name')
                 ->orderBy('created_at')
-                ->limit(1)
+                ->limit(3)
                 ->get();
         $categorydata = CategoryModel::all();
         return view('home.blog',['article' => $articledata,'category'=>$categorydata,'latestnews' => $latestnewsdata]);
@@ -60,9 +60,19 @@ class HomeController extends Controller
         return view('recipe.singlerecipe');
     }
 
-    public function singleblog()
+    public function singleblog($id)
     {
-        return view('home.singleblog');
+        $latestnewsdata = DB::table('article')
+                ->join('users', 'users.id', '=', 'article.created_by')
+                ->select('article.*', 'users.name')
+                ->orderBy('created_at')
+                ->limit(3)
+                ->get();
+        $categorydata = CategoryModel::all();
+        $singleblog =  DB::table('article')->join('users', 'users.id', '=', 'article.created_by')
+                                           ->select('article.*', 'users.name')
+                                           ->where('article.title','=',$id)->first();
+        return view('home.singleblog',['singleblog' => $singleblog,'category'=>$categorydata,'latestnews'=>$latestnewsdata]);
     }
 
 

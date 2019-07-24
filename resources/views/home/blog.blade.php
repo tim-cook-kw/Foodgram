@@ -111,7 +111,7 @@
                     <p>
                        {{$item->description}}
                     </p>
-                    <a class="read-more-bordered" href="#">Read More</a>
+                    <a class="read-more-bordered" href="{{route('singleblog.index',['id ' => $item->title])}}">Read More</a>
                 </div>
             </div>
         </article>
