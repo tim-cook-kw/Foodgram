@@ -109,9 +109,9 @@
                         <li class="comments"><a href="#">12 Comments</a></li>
                     </ul>
                     <p>
-                       {{$item->description}}
+                       {{str_limit($item->description, $limit = 150, $end = '...')}}
                     </p>
-                    <a class="read-more-bordered" href="#">Read More</a>
+                    <a class="read-more-bordered" href="{{route('singleblog.index',['id ' => $item->title])}}">Read More</a>
                 </div>
             </div>
         </article>

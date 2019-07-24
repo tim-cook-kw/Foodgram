@@ -207,6 +207,14 @@
                     ]
                 });
         $('document').ready(function(){
+            new FroalaEditor('#description', {
+                                    heightMin: 100,
+                                    heightMax: 200
+                                })
+            new FroalaEditor('#descriptionedit', {
+                heightMin: 100,
+                heightMax: 200
+            })
             $('form[id="formarticle"]').validate({
                 rules: {
                     judul: 'required',

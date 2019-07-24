@@ -14,18 +14,17 @@
           <div class="row">
             <div class="col-md-12">
               <article class="recipe_area">
-                <h2 class="recipe_title">Classic and Simple Meat Lasagna</h2>
+                <h2 class="recipe_title">{{$singlerecipe->title}}</h2>
                 <div class="recipe_header">
-                  <div class="author"> <i class="fa fa-user-circle-o"></i><span>author:</span>Pelin Oleg</div><a class="print" href="#" onclick="window.print()"> <i class="fa fa-print"></i></a><a class="category" href="#"> <i class="fa fa-folder-o"></i>Breakfast</a>
+                  <div class="author"> <i class="fa fa-user-circle-o"></i><span>author:</span>{{$singlerecipe->name}}</div><a class="print" href="#" onclick="window.print()"> <i class="fa fa-print"></i></a><a class="category" href="#"> <i class="fa fa-folder-o"></i>Breakfast</a>
                   <div class="time"> <i class="fa fa-clock-o"></i>75<span>Mins  </span></div>
                   <div class="people"><i class="fa fa-users"></i>4<span>people   </span></div>
                 </div>
                 <div class="recipe_img_desc">
-                  <div class="img"><img class="resize" src="{{ asset('assets/recipes/img/demo/r_1.jpg') }}" alt=""></div>
+                  <div class="img"><img class="resize" src="{{ asset($singlerecipe->image) }}" alt=""></div>
                   <div class="desc"> 
                     <div class="title">Description</div>
-                    <p>Maybe you're not a nonna. And you didn't inherit a faded recipe for lasagna Bolognese from one, either. Not to worry. What matters is that this version of the Italian classic tastes as though it's been perfected over generations. The dish's complex sauce, rich béchamel, and—here's the secret—eight impossibly thin pasta layers (yes, homemade) create a brilliantly balanced bite. Time and dedication to each and every element turn this recipe into one that your grandkids (and friends) will be begging for.</p>
-                    <p>Mushrooms, onions and ground beef in a ready-made pasta sauce are layered with cottage cheese, ricotta cheese and Parmesan between uncooked lasagna noodles. Sprinkle mozzarella over the top and bake. It's that simple!</p>
+                    {{$singlerecipe->description}}
                   </div>
                 </div>
                 <div class="recipe_ing_dir">

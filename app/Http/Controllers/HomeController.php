@@ -43,7 +43,7 @@ class HomeController extends Controller
                 ->join('users', 'users.id', '=', 'article.created_by')
                 ->select('article.*', 'users.name')
                 ->orderBy('created_at')
-                ->limit(1)
+                ->limit(3)
                 ->get();
         $categorydata = CategoryModel::all();
         return view('home.blog',['article' => $articledata,'category'=>$categorydata,'latestnews' => $latestnewsdata]);
@@ -51,18 +51,48 @@ class HomeController extends Controller
 
     public function recipe()
     {
-        return view('recipe.recipe');
+        $articledata = DB::table('article')
+                ->join('users', 'users.id', '=', 'article.created_by')
+                ->select('article.*', 'users.name')
+                ->where('article.id_category','=',3)
+                ->paginate(12);
+        $bestrecipe = DB::table('article')
+                ->join('users', 'users.id', '=', 'article.created_by')
+                ->select('article.*', 'users.name')
+                ->where('article.id_category','=',3)
+                ->limit(8)
+                ->get();
+        $latestrecipe = DB::table('article')
+                ->join('users', 'users.id', '=', 'article.created_by')
+                ->select('article.*', 'users.name')
+                ->orderBy('created_at')
+                ->limit(3)
+                ->get();
+        return view('recipe.recipe',['recipe' => $articledata,'bestrecipe'=>$bestrecipe,'latestrecipe' => $latestrecipe]);
     }
 
 
-    public function singlerecipe()
+    public function singlerecipe($id)
     {
-        return view('recipe.singlerecipe');
+        $singlerecipe =  DB::table('article')->join('users', 'users.id', '=', 'article.created_by')
+        ->select('article.*', 'users.name')
+        ->where('article.title','=',$id)->first();
+        return view('recipe.singlerecipe',['singlerecipe'=>$singlerecipe]);
     }
 
-    public function singleblog()
+    public function singleblog($id)
     {
-        return view('home.singleblog');
+        $latestnewsdata = DB::table('article')
+                ->join('users', 'users.id', '=', 'article.created_by')
+                ->select('article.*', 'users.name')
+                ->orderBy('created_at')
+                ->limit(3)
+                ->get();
+        $categorydata = CategoryModel::all();
+        $singleblog =  DB::table('article')->join('users', 'users.id', '=', 'article.created_by')
+                                           ->select('article.*', 'users.name')
+                                           ->where('article.title','=',$id)->first();
+        return view('home.singleblog',['singleblog' => $singleblog,'category'=>$categorydata,'latestnews'=>$latestnewsdata]);
     }
 
     public function about()
@@ -79,5 +109,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    
+    public function admin(){
+        return view('admin.dashboard');
+    }
 }
