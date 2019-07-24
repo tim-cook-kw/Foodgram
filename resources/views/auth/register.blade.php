@@ -260,45 +260,32 @@
                                                 <div class="sub-main-w3">   
                                                     <h2>Foodgram Sign Up</h2>
                                                     <form action="register" method="post">
-                                                        <div class="input-group form-group" style="margin-top: 30px">
-                                                            <div class="input-group-prepend">
+                                                            <div class="input-group-prepend" style="margin-top: 30px"> 
                                                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                                                                 <input placeholder="Fullname" name="fullname" type="text" required="" style="width: 344px">
                                                             </div>                                                             
-                                                        </div>                                                    
-
-                                                        <div class="input-group form-group" style="margin-top: 30px">
-                                                            <div class="input-group-prepend">
+                 
+                                                            <div class="input-group-prepend" style="margin-top: 30px">
                                                                 <span class="input-group-text"><i class="fas fa-users"></i></span>
                                                                 <input placeholder="Username" name="username" type="text" required="" style="width: 344px"> 
                                                             </div>
                                                                
-                                                        </div>
-
-                                                        <div class="input-group form-group" style="margin-top: 30px">
-                                                            <div class="input-group-prepend">
+                                                            <div class="input-group-prepend" style="margin-top: 30px">
                                                                 <span class="input-group-text"><i class="fa fa-envelope fa"></i></span>
                                                                   <input style="width: 344px" placeholder="Email" name="mail" type="email" required=""> 
                                                             </div>
-                                                               
-                                                        </div>
-                                                                                            
-                                                        <div class="input-group form-group" style="margin-top: 30px">
+{{--                                                           
                                                           <div class="input-group-prepend">
                                                               <span class="input-group-text"><i class="fa fa-lock"></i></span>
                                                                 <select style="width:344px;">
                                                                     <option></option>
-                                                                </select>
-                                                          </div>
-                                                             
-                                                      </div>
-                                                        <div class="input-group form-group" style="margin-top: 30px">
-                                                            <div class="input-group-prepend">
+                                                                </select>                                                                                                                     
+                                                          </div> --}}
+                                                            <div class="input-group-prepend" style="margin-top: 30px">
                                                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                                                                   <input  style="width: 344px" placeholder="Password" name="Password" type="password" required="">
                                                             </div>
-                                                               
-                                                        </div>
+                                                            
 
 
 
@@ -306,15 +293,15 @@
 
                                                     
                                                         <label class="anim" style="margin-top: 25px; margin-left: 1px; margin-right: 1px">
-                                                        <input class="checkbox" type="checkbox">
-                                                            <span style="margin-top: -5px;">I agree all statements in <u>Terms of service</u></span> 
-                                                 
-                                                        </label> 
-                                                            <div class="clear"></div>
-                                                        <input type="submit" value="Sign Up">
-                                                           <div class="checkbox" style="margin-top: 25px;">
-                                                               Have an account?<a href="#"><u>Sign In</u></a>
-                                                            </div> 
+                                                          <input class="checkbox" type="checkbox">
+                                                              <span style="margin-top: -5px;">I agree all statements in <u>Terms of service</u></span> 
+                                                   
+                                                          </label> 
+                                                              <div class="clear"></div>
+                                                          <input type="submit" value="Sign Up">
+                                                             <div class="checkbox" style="margin-top: 25px;">
+                                                                 Have an account?<a href="#"><u>Sign In</u></a>
+                                                              </div> 
                                                     </form>
                                                 </div>
                                             </div>
