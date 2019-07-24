@@ -23,8 +23,8 @@
         <div class="menu">
             <ul class="list">
                 <li class="header">MAIN NAVIGATION</li>
-                <li class="active">
-                    <a href="index.html">
+                <li class="{{ Request::is('admin') ? 'active' : '' }}">
+                    <a href="{{route('admin.index')}}">
                         <i class="material-icons">home</i>
                         <span>Home</span>
                     </a>
