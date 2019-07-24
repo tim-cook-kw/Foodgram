@@ -51,13 +51,33 @@ class HomeController extends Controller
 
     public function recipe()
     {
-        return view('recipe.recipe');
+        $articledata = DB::table('article')
+                ->join('users', 'users.id', '=', 'article.created_by')
+                ->select('article.*', 'users.name')
+                ->where('article.id_category','=',3)
+                ->paginate(12);
+        $bestrecipe = DB::table('article')
+                ->join('users', 'users.id', '=', 'article.created_by')
+                ->select('article.*', 'users.name')
+                ->where('article.id_category','=',3)
+                ->limit(8)
+                ->get();
+        $latestrecipe = DB::table('article')
+                ->join('users', 'users.id', '=', 'article.created_by')
+                ->select('article.*', 'users.name')
+                ->orderBy('created_at')
+                ->limit(3)
+                ->get();
+        return view('recipe.recipe',['recipe' => $articledata,'bestrecipe'=>$bestrecipe,'latestrecipe' => $latestrecipe]);
     }
 
 
-    public function singlerecipe()
+    public function singlerecipe($id)
     {
-        return view('recipe.singlerecipe');
+        $singlerecipe =  DB::table('article')->join('users', 'users.id', '=', 'article.created_by')
+        ->select('article.*', 'users.name')
+        ->where('article.title','=',$id)->first();
+        return view('recipe.singlerecipe',['singlerecipe'=>$singlerecipe]);
     }
 
     public function singleblog($id)
