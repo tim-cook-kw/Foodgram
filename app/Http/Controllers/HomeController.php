@@ -65,6 +65,12 @@ class HomeController extends Controller
         return view('home.singleblog');
     }
 
+    public function about()
+    {
+        return view('home.about');
+    }
+
+
 
 
 
