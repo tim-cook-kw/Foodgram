@@ -20,11 +20,11 @@
                            </div>
                            <div id="navbar" class="navbar-collapse collapse">
                                <ul class="nav navbar-nav navbar-right">
-                                   <li class="{{ Request::is('homeindex') ? 'active' : '' }}"><a href="{{route('home.index')}}">Home</a></li>
-                                   <li class="{{ Request::is('homeblog') ? 'active' : '' }}"><a href="{{route('blog.index')}}">Blog</a></li>
-                                   <li class="{{ Request::is('homerecipe') ? 'active' : '' }}"><a href="{{route('recipe.index')}}">Recipes</a></li>
-                                   <li><a href="#about">About us</a></li>  
-                                   <li><a href="#footer">Contact us</a></li>
+                                <li class="{{ Request::is('homeindex') ? 'active' : '' }}"><a href="{{route('home.index')}}">Home</a></li>
+                                <li class="{{ Request::is('homeblog') ? 'active' : '' }}"><a href="{{route('blog.index')}}">Blog</a></li>
+                                <li class="{{ Request::is('homerecipe') ? 'active' : '' }}"><a href="{{route('recipe.index')}}">Recipes</a></li>
+                                <li class="{{ Request::is('homeabout') ? 'active' : '' }}"><a href="{{route('about.index')}}">About us</a></li>   
+                                <li class="{{ Request::is('homecontact') ? 'active' : '' }}"><a href="{{route('contact.index')}}">Contact us</a></li>   
                                </ul>
                            </div>
                            <!-- end nav-collapse -->

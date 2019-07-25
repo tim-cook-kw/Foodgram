@@ -30,6 +30,8 @@ Route::get('homesingleblog/{id}', 'HomeController@singleblog') ->name('singleblo
 
 Route::get('homerecipe', 'HomeController@recipe') ->name('recipe.index');
 
+Route::get('homecontact', 'HomeController@contact') ->name('contact.index');
+
 Route::get('homesinglerecipe/{id}', 'HomeController@singlerecipe') ->name('singlerecipe.index');
 Auth::routes();
 
