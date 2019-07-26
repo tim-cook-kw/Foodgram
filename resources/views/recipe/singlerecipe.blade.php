@@ -24,7 +24,7 @@
                   <div class="img"><img class="resize" src="{{ asset($singlerecipe->image) }}" alt=""></div>
                   <div class="desc"> 
                     <div class="title">Description</div>
-                    {{$singlerecipe->description}}
+                    {!! $singlerecipe->description !!}
                   </div>
                 </div>
                 <div class="recipe_ing_dir">
@@ -33,32 +33,14 @@
                       <div class="ing">
                         <div class="title">Ingredients</div>
                         <ul>
-                          <li>12 whole wheat lasagna noodles</li>
-                          <li>1 pound lean ground beef</li>
-                          <li>2 cloves garlic, chopped</li>
-                          <li>1/2 teaspoon garlic powder</li>
-                          <li>1 teaspoon dried oregano, or to taste</li>
-                          <li>salt and ground black pepper to taste</li>
-                          <li>1 (16 ounce) package cottage cheese</li>
-                          <li>2 eggs</li>
-                          <li>1/2 cup shredded Parmesan cheese</li>
-                          <li>1 1/2  jars tomato-basil pasta sauce</li>
-                          <li>2 cups shredded mozzarella cheese</li>
-                          <li>1 tbsp fresh thyme leaves</li>
-                          <li>1 tsp vegetable bouillon</li>
-                          <li>400g can black-eyed beans</li>
+                          {!! $singlerecipe->ingredient !!}
                         </ul>
                       </div>
                     </div>
                     <div class="col-lg-8 col-md-7"> 
                       <div class="desc"> 
                         <div class="title">Directions</div>
-                        <p><span class="numb">1.</span>Preheat oven to 350 degrees F (175 degrees C).</p>
-                        <p> <span class="numb">2.</span>Fill a large pot with lightly salted water and bring to a rolling boil over high heat. Once the water is boiling, add the lasagna noodles a few at a time, and return to a boil. Cook the pasta uncovered, stirring occasionally, until the pasta has cooked through, but is still firm to the bite, about 10 minutes. Remove the noodles to a plate.</p>
-                        <p><span class="numb">3.</span>Place the ground beef into a skillet over medium heat, add the garlic, garlic powder, oregano, salt, and black pepper to the skillet. Cook the meat, chopping it into small chunks as it cooks, until no longer pink, about 10 minutes. Drain excess grease.</p>
-                        <p><span class="numb">4.</span>In a bowl, mix the cottage cheese, eggs, and Parmesan cheese until thoroughly combined.</p>
-                        <p><span class="numb">5.</span>Place 4 noodles side by side into the bottom of a 9x13-inch baking pan; top with a layer of the tomato-basil sauce, a layer of ground beef mixture, and a layer of the cottage cheese mixture. Repeat layers twice more, ending with a layer of sauce; sprinkle top with the mozzarella cheese. Cover the dish with aluminum foil.</p>
-                        <p><span class="numb">6.</span>Bake in the preheated oven until the casserole is bubbling and the cheese has melted, about 30 minutes. Remove foil and bake until cheese has begun to brown, about 10 more minutes. Allow to stand at least 10 minutes before serving.</p>
+                        {!! $singlerecipe->direction !!}
                       </div>
                     </div>
                   </div>
