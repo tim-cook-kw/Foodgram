@@ -3,7 +3,8 @@
 <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+		<title>About - Foodgram</title>
+		
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,7 +13,38 @@
         <link rel="stylesheet" href="{{ asset('assets/about/css/normalize.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/about/css/main.css') }}">
 		<link href='http://fonts.googleapis.com/css?family=Mountains+of+Christmas' rel='stylesheet' type='text/css'>
-        <script src="{{ asset('assets/about/js/vendor/modernizr-2.6.2.min.js') }}"></script>
+		    
+		<!-- Site Icons -->
+		<link rel="icon" type="image/png" href="{{ asset('assets/icon_logo.png') }}"/>
+	
+
+	<!--font awesome stylesheet-->
+		<link rel="stylesheet" href="{{ asset('assets/frontend/css/font-awesome.min.css') }}"/>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{{ asset('assets/frontend/css/bootstrap.min.css') }} ">
+		<!-- Site CSS -->
+		<link rel="stylesheet" href="{{ asset('assets/frontend/css/style.css') }}">
+		<!-- Responsive CSS -->
+		<link rel="stylesheet" href="{{ asset('assets/frontend/css/responsive.css') }}">
+		<!-- color -->
+		<link id="changeable-colors" rel="stylesheet" href="{{ asset('assets/frontend/css/colors/orange.css') }}" />
+
+	<!--animate stylesheet-->
+		<link rel="stylesheet" href="{{ asset('assets/frontend/css/animate.min.css') }}"/>
+		<link rel="stylesheet" href="{{ asset('assets/frontend/css/slick.css') }}"/>
+		<link rel="stylesheet" href="{{ asset('assets/frontend/css/slick-theme.css') }}"/>
+
+		<link rel="stylesheet" href="{{ asset('assets/frontend/css/priority-nav-core.css') }} ">
+		
+		<link href="https://fonts.googleapis.com/css?family=Great+Vibes|Pathway+Gothic+One|Roboto:100,300,400" rel="stylesheet">
+
+	<!--selectric stylesheet-->
+		<link rel="stylesheet" href="{{ asset('assets/frontend/css/selectric.css') }}"/>
+		
+		
+		<script src="{{ asset('assets/about/js/vendor/modernizr-2.6.2.min.js') }}"></script>
+		
+		
     </head>
     <body>
         <div class='preloader'>
@@ -139,25 +171,17 @@
                         data--7000-top="opacity: 0;"
                         data--8000-top="opacity: 1;"
                         data-anchor-target="#background"                    
-                    >
-                        <div class="text-en">WISHING YOU & YOUR TEAM<br/>A HAPPY HOLIDAY SEASON!</div>
-                        <div class="text-fr">NOUS VOUS SOUHAITONS À TOUS<br/>UN JOYEUX TEMPS DES FÊTES !</div>
+					>
+					
+					
+					<div class="text-en" style="font-size: 35px; text-align: justify;">Foodgram adalah kumpulan berbagai resep menu masakan, mulai dari cara memasak yang paling dasar hingga hidangan-hidangan utama baik dalam maupun luar negeri.</div>
                     </div>
-                    <div class="message-from"
-                        data--7500-top="opacity: 0;"
-                        data--8500-top="opacity: 1;"
-                        data-anchor-target="#background"                    
-                    >
-                        <div class="text-en">FROM ALL OF US AT</div>
-                        <div class="text-fr">De la part de toute l'équipe de</div>
-                    </div>                  
-                    
                     <div class="message-logo"
                         data--8000-top="opacity: 0;"
                         data--9000-top="opacity: 1;"
                         data-anchor-target="#background"                    
                     >
-                        <a href="http://studioazura.com/"><img src="{{ asset('assets/about/img/fs-logo-light.png') }}"/></a>
+                        <a href="https://github.com/rhhezkyillma/"><img src="{{ asset('assets/about/img/fs-logo-light.png') }}"/></a>
                     </div>
                     
                 </div>    
@@ -927,15 +951,60 @@
 
 </div>
 				
-            </div>     
+			</div>    
+			
+			<div id="site-header">
+				<header id="header" class="header-block-top">
+					<div class="container">
+						
+						<div class="row">
+							<div class="main-menu">
+								<!-- navbar -->
+								<nav class="navbar navbar-default" id="mainNav">
+
+									<div class="navbar-header">
+										<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+											<span class="sr-only">Toggle navigation</span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+										</button>
+										<div class="logo">
+											<a class="navbar-brand js-scroll-trigger logo-header" href="#">
+													<img src="{{ asset('assets/frontend/images/logo.png') }}" alt="">
+											</a>
+										</div>
+									</div>
+									<div id="navbar" class="navbar-collapse collapse">
+										<ul class="nav navbar-nav navbar-right">
+											<li class="{{ Request::is('homeindex') ? 'active' : '' }}"><a href="{{route('home.index')}}">Home</a></li>
+											<li class="{{ Request::is('homeblog') ? 'active' : '' }}"><a href="{{route('blog.index')}}">Blog</a></li>
+											<li class="{{ Request::is('homerecipe') ? 'active' : '' }}"><a href="{{route('recipe.index')}}">Recipes</a></li>
+											<li class="{{ Request::is('homeabout') ? 'active' : '' }}"><a href="{{route('about.index')}}">About us</a></li>  
+											<li class="{{ Request::is('homecontact') ? 'active' : '' }}"><a href="{{route('contact.index')}}">Contact us</a></li>   
+										</ul>
+									</div>
+									<!-- end nav-collapse -->
+								</nav>
+
+							</div>
+
+						</div>
+				   
+
+					</div>
+		   
+				</header>
+
+			</div>
            
-            {{-- <div class="scroll-tool-tip"
+            <div class="scroll-tool-tip"
                 data-top="opacity: 1; display: block;"
                 data--500-top="opacity: 0; display: none;" 
                 data-anchor-target="#background"           
             >
-                <div class="text-en"><p>SCROLL DOWN TO EXPLORE</p></div>
-                <div class="text-fr"><p>FAITES DÉFILER POUR EXPLORER</p></div>
+                <div class="text-en" style="margin-bottom:100px"><p style="text-align: center">SCROLL DOWN TO EXPLORE</p></div>
+ 
             </div>
             <div class="scroll-down"
                 data-top="opacity: 1; display: block;"
@@ -955,7 +1024,8 @@
             >
                 <a href="#scine-two" data-menu-top="7000">
                     <img src="{{ asset('assets/about/img/scroll-down.png') }}" />
-                </a>
+				</a>
+				
             </div> 
             
             <div class="scroll-down"
@@ -966,25 +1036,45 @@
                 data-anchor-target="#background"           
             >
                 <a href="#scine-three" data-menu-top="10000">
-                    <img src="{{ asset('assets/about/img/scroll-down.png"') }} />
+                    <img src="{{ asset('assets/about/img/scroll-down.png') }}" />
                 </a>
-            </div>             --}}
+            </div>            
                 
-            {{-- <div class="scroll-down"
+            <div class="scroll-down"
                 data-top="display: none;"
                 data--9500-top="opacity: 0; display: block; transform:rotate(180deg);"
                 data--10000-top="opacity: 1; display: block; transform:rotate(180deg);"
                 data-anchor-target="#background"         
             >
                 <a href="#"><img src="{{ asset('assets/about/img/scroll-down.png') }}" /></a>
-            </div>  --}}
+			</div> 
+			
+			
+			<footer>
+
+				    <div id="copyright" class="copyright-main">
+							<div class="container">
+								<div class="row">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										<h6 class="copy-title"> Copyright &copy; 2019 Foodgram is powered by <a href="https://github.com/rhhezkyillma" target="_blank">Reezky Illma</a> </h6>
+									</div>
+								</div>
+								<!-- end row -->
+							</div>
+							<!-- end container -->
+					</div>
+						<!-- end copyright-main -->
+				
+{{--           
+				<p style="text-align:center">&copy; COPYRIGHT 2019 <a href="#">Reezky Illmawati</a></p> --}}
+			
+			</footer>
 
 
-            <footer>
-                <div class="wrapper clearfix">
-                    <p>&copy; COPYRIGHT 2014 <a href="http://studioazura.com/">STUDIO AZURA</a> AND <a href="http://www.fruitfulsource.com/">FRUITFUL SOURCE</a></p>
-                </div>
-            </footer>
+
+
+			
+
 
             <script src="{{ asset('assets/about/js/jquery.min.js') }}"></script>
             <script>window.jQuery || document.write('<script src="{{ asset('assets/about/js/vendor/jquery-1.10.2.min.js') }}"><\/script>')</script>
@@ -998,9 +1088,28 @@
             </script>
 
             <script src="{{ asset('assets/about/js/plugins.js') }}"></script>
-            <script src="{{ asset('assets/about/js/main.js') }}"></script>
+			<script src="{{ asset('assets/about/js/main.js') }}"></script>
+			
+
+			   <!-- Modernizer -->
+			<script src="{{ asset('assets/frontend/js/modernizer.js') }}"></script>
+
+			<!-- ALL JS FILES -->
+			<script src="{{ asset('assets/frontend/js/all.js') }}"></script>
+			<script src="{{ asset('assets/frontend/js/bootstrap.min.js') }}"></script>
+			<!-- ALL PLUGINS -->
+			<script src="{{ asset('assets/frontend/js/custom.js') }}"></script>
+
+			<script src="{{ asset('assets/frontend/js/jquery-1.11.3.min.js') }}"></script>
+			<script src="{{ asset('assets/frontend/js/slick.min.js') }}"></script>
+			<script src="{{ asset('assets/frontend/js/wow.js') }}"></script>
+			<script src="{{ asset('assets/frontend/js/custom.js') }}"></script>
+
+			<script src="{{ asset('assets/frontend/js/jquery.min.js') }} "></script>
+			<script src="{{ asset('assets/frontend/js/jquery.resizeimagetoparent.min.js') }} "></script>
+			<script src="{{ asset('assets/frontend/js/jquery.dotdotdot.min.js') }}"></script>
+			<script src="{{ asset('assets/frontend/js/priority-nav.js') }} "></script>
+			<script src="{{ asset('assets/frontend/js/common.js') }} "></script>
             
     </body>
-
-<!-- Mirrored from studioazura.com/holidays2014/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Jul 2019 05:37:21 GMT -->
 </html>
