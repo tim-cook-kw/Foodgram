@@ -18,39 +18,40 @@
                         <p class="title-caption text-center">Terdapat berbagai macam menu variasi makanan dan minuman dari Foodgram </p>
                     </div>
 
-<section class="hot-recipes-var2 ext-var3 corner-bg-var">
-    <div class="container">
-        <div class="wrapper-hot-recipe-var2">
-            <div class="hot-recipes-bordered">
-                 <div class="hot-row">
-                     @foreach ($receipe as $item)
-                        <div class="split-images-var2 col-size text-center">
-                            <div class="image-first inner-split">
-                                <div class="image common-split animated wow flipInY animation-delay100ms">
-                                    <a href="#"><img src="{{ asset($item->image) }}" alt="image"/></a>
-                                </div>
-                                <div class="intro common-split animated wow flipInY animation-delay200ms">
-                                    <div class="intro-inner ">
-                                        <h3><a href="#">pasto pizza with fillas cheese toppings</a></h3>
-                                        <p>
-                                            {!! str_limit($item->description, $limit = 30, $end = '...')!!}
-                                        </p>
-                                        <a class="read-more" href="{{route('singlerecipe.index',['id ' => $item->title])}}">Learn more</a>
+                    <section class="hot-recipes-var2 ext-var3 corner-bg-var">
+                            <div class="container">
+                                <div class="wrapper-hot-recipe-var2">
+                                    <div class="hot-recipes-bordered">
+                                         <div class="hot-row">
+                                            @foreach ($receipe as $item)
+                                            <div class="split-images-var2 col-size text-center">
+                                                <div class="image-first inner-split">
+                                                    <div class="image common-split animated wow flipInY animation-delay100ms">
+                                                        <a href="#"><img src="{{ asset($item->image) }}" alt="image"/></a>
+                                                    </div>
+                                                    <div class="intro common-split animated wow flipInY animation-delay200ms">
+                                                        <div class="intro-inner ">
+                                                            <h3><a href="#">pasto pizza with fillas cheese toppings</a></h3>
+                                                            
+                                                            <p>
+                                                                    {!! str_limit($item->description, $limit = 30, $end = '...')!!}
+                                                            </p>
+                                                            <a class="read-more" href="{{route('singlerecipe.index',['id ' => $item->title])}}">Learn more</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @endforeach
+                        
+                                                                       
+                                        </div>
                                     </div>
+                                    <div class="corner-image hot animated wow rollIn animation-delay800ms">
+                                    <img src="images/slider-bg-corner2.png" alt="image">
+                                </div>
                                 </div>
                             </div>
-                        </div>
-                     @endforeach
-                    
-
-                </div>
-            </div>
-            <div class="corner-image hot animated wow rollIn animation-delay800ms">
-            <img src="{{ asset('assets/frontend/images/menu-item-thumbnail-02.jpg') }} " alt="image">
-        </div>
-        </div>
-    </div>
-</section>
+                        </section>
                   
                     <!-- end gal-container -->
                 </div>
@@ -93,11 +94,13 @@
                                                 </p>
                                                 <a class="read-more-bordered" style="margin-bottom:50px" href="{{route('singleblog.index',['id ' => $item->title])}}">read more</a>
                                             </article>
-                                        </div>
+                                        </div>            
                                     </div>
                                 </div>
                                 <!-- end col -->
                             </div>
+
+                        
                         @endforeach
                         
                     </div>
