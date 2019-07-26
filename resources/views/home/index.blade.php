@@ -31,7 +31,7 @@
                                 </div>
                                 <div class="intro common-split animated wow flipInY animation-delay200ms">
                                     <div class="intro-inner ">
-                                        <h3><a href="#">pasto pizza with fillas cheese toppings</a></h3>
+                                        <h3><a href="#">{{$item->title}}</a></h3>
                                         <p>
                                             {!! str_limit($item->description, $limit = 150, $end = '...')!!}
                                         </p>

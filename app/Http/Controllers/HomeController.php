@@ -33,6 +33,7 @@ class HomeController extends Controller
         $latestnewsdata = DB::table('article')
         ->join('users', 'users.id', '=', 'article.created_by')
         ->select('article.*', 'users.name')
+        ->where('article.id_category','!=',4)
         ->orderBy('created_at')
 
         ->limit(3)
@@ -52,10 +53,12 @@ class HomeController extends Controller
         $articledata = DB::table('article')
                 ->join('users', 'users.id', '=', 'article.created_by')
                 ->select('article.*', 'users.name')
+                ->where('article.id_category','!=',4)
                 ->paginate(3);
         $latestnewsdata = DB::table('article')
                 ->join('users', 'users.id', '=', 'article.created_by')
                 ->select('article.*', 'users.name')
+                ->where('article.id_category','!=',4)
                 ->orderBy('created_at')
                 ->limit(3)
                 ->get();
@@ -79,6 +82,7 @@ class HomeController extends Controller
         $latestrecipe = DB::table('article')
                 ->join('users', 'users.id', '=', 'article.created_by')
                 ->select('article.*', 'users.name')
+                ->where('article.id_category','=',4)
                 ->orderBy('created_at')
                 ->limit(3)
                 ->get();
@@ -99,6 +103,7 @@ class HomeController extends Controller
         $latestnewsdata = DB::table('article')
                 ->join('users', 'users.id', '=', 'article.created_by')
                 ->select('article.*', 'users.name')
+                ->where('article.id_category','!=',4)
                 ->orderBy('created_at')
                 ->limit(3)
                 ->get();
