@@ -172,15 +172,13 @@
             <div class="widget tags-widget">
                 <h2>Tags</h2>
                 <ul>
-                    <li><a href="#">loren</a><li>
-                    <li><a href="#">food</a><li>
-                    <li><a href="#">chicken</a><li>
-                    <li><a href="#">dolor</a><li>
-                    <li><a href="#">amet</a><li>
-                    <li><a href="#">fusicon</a><li>
-                    <li><a href="#">corn</a><li>
-                    <li><a href="#">hot chicken</a><li>
-                    <li><a href="#">lorem</a><li>
+                    <li><a href="#">makanan</a><li>
+                    <li><a href="#">minuman</a><li>
+                    <li><a href="#">ayam</a><li>
+                    <li><a href="#">daging</a><li>
+                    <li><a href="#">dessert</a><li>
+                    <li><a href="#">buah</a><li>
+                    <li><a href="#">sayur</a><li>
                 </ul>
             </div>
             <!--tags widget ends-->

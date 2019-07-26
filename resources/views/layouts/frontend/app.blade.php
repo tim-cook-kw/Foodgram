@@ -15,7 +15,11 @@
     <link rel="shortcut icon" href="{{ asset('assets/frontend/images/favicon.ico') }}" type="image/x-icon" />
  
 
-  <!--font awesome stylesheet-->
+    <link rel="stylesheet" href="{{ asset('assets/recipes/css/priority-nav-core.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/recipes/css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Pathway+Gothic+One|Roboto:100,300,400" rel="stylesheet">
+  
+    <!--font awesome stylesheet-->
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/font-awesome.min.css') }}"/>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/bootstrap.min.css') }} ">
@@ -32,6 +36,10 @@
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/slick-theme.css') }}"/>
 
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/priority-nav-core.css') }} ">
+
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/contact/css/main.css') }}">
+  
     
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Pathway+Gothic+One|Roboto:100,300,400" rel="stylesheet">
 
@@ -291,10 +299,33 @@
     <script src="{{ asset('assets/frontend/js/custom.js') }}"></script>
 
     <script src="{{ asset('assets/frontend/js/jquery.min.js') }} "></script>
-    <script src="{{ asset('assets/frontend/js/jquery.resizeimagetoparent.min.js') }} "></script>
-    <script src="{{ asset('assets/frontend/js/jquery.dotdotdot.min.js') }}"></script>
     <script src="{{ asset('assets/frontend/js/priority-nav.js') }} "></script>
-    <script src="{{ asset('assets/frontend/js/common.js') }} "></script>
+
+
+    
+    <script src="{{ asset('assets/contact/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ asset('assets/contact/vendor/bootstrap/js/popper.js') }}"></script>
+    <script src="{{ asset('assets/contact/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/contact/vendor/select2/select2.min.js') }}"></script>
+    <script src="{{ asset('assets/contact/js/main.js') }}"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-23581568-13');
+    </script>
+
+    <script src="{{ asset('assets/contact/vendor/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/contact/js/mail.js') }}"></script>
+
+    <script src="{{ asset('assets/recipes/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/recipes/js/jquery.resizeimagetoparent.min.js') }}"></script>
+    <script src="{{ asset('assets/recipes/js/jquery.dotdotdot.min.js"') }}"></script>
+    <script src="{{ asset('assets/recipes/js/common.js') }}"></script>
 
 
 @stack('js')

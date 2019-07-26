@@ -25,12 +25,12 @@
         <div class="menu">
             <ul class="list">
                 <li class="header">MAIN NAVIGATION</li>
-                <li class="{{ Request::is('admin') ? 'active' : '' }}">
+                {{-- <li class="{{ Request::is('admin') ? 'active' : '' }}">
                     <a href="{{route('admin.index')}}">
                         <i class="material-icons">home</i>
                         <span>Home</span>
                     </a>
-                </li>
+                </li> --}}
                 <li class="{{ Request::is('usermanagement') ? 'active' : '' }}">
                     <a href="{{route('usermanagement.index')}}">
                         <i class="material-icons">person</i>
@@ -67,10 +67,10 @@
         <!-- Footer -->
         <div class="legal">
             <div class="copyright">
-                &copy; 2016 - 2017 <a href="javascript:void(0);">AdminBSB - Material Design</a>.
+                &copy; 2019 <a href="javascript:void(0);">Admin-Foodgram</a>.
             </div>
             <div class="version">
-                <b>Version: </b> 1.0.5
+                <b>Version: </b> 1.0.0
             </div>
         </div>
         <!-- #Footer -->

@@ -1,33 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>About - Foodgram</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="{{ asset('assets/icon_logo.png') }}"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/contact/vendor/bootstrap/css/bootstrap.min.css') }}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/contact/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/contact/vendor/animate/animate.css') }}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/contact/vendor/css-hamburgers/hamburgers.min.css') }}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/contact/vendor/select2/select2.min.css') }}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/contact/css/util.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/contact/css/main.css') }}">
-<!--===============================================================================================-->
+@extends('layouts.frontend.app')
 
-	<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
-
-</head>
-<body>
+@section('title','About')
 
 
-	<div class = "frame">
+@push('css')
+    
+@endpush
+@section('content')
+
+
+<article class="post-single" >
+      
+        <div class="post-contents" >
+            <div class="post-contents-inner" >
+             
+	<div class = "frame" style="margin-bottom:150px">
         <div id = "button_open_envelope" style="text-align: center">
 				Contact Us
 			</div>
@@ -70,30 +57,12 @@
 			<script src="{{ asset('assets/contact/js/mail.js') }}"></script>
 		</div>
 
-	
+	</div>
+</div>
+</article>
 
-<!--===============================================================================================-->
-	<script src="{{ asset('assets/contact/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
-<!--===============================================================================================-->
-	<script src="{{ asset('assets/contact/vendor/bootstrap/js/popper.js') }}"></script>
-	<script src="{{ asset('assets/contact/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-<!--===============================================================================================-->
-	<script src="{{ asset('assets/contact/vendor/select2/select2.min.js') }}"></script>
-<!--===============================================================================================-->
-	<script src="{{ asset('assets/contact/js/main.js') }}"></script>
+@endsection
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-23581568-13');
-	</script>
-
-	<script src="{{ asset('assets/contact/vendor/jquery.min.js') }}"></script>
-	<script src="{{ asset('assets/contact/js/mail.js') }}"></script>
-
-</body>
-</html>
+@push('js')
+    
+@endpush
