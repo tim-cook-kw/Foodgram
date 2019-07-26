@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Modules\Article\Entities\ArticleModel;
 use Modules\Category\Entities\CategoryModel;
+use Auth;
 class HomeController extends Controller
 {
     /**
@@ -111,5 +112,9 @@ class HomeController extends Controller
      */
     public function admin(){
         return view('admin.dashboard');
+    }
+    public function logout(){
+        Auth::logout();
+	    return redirect()->route('login');
     }
 }

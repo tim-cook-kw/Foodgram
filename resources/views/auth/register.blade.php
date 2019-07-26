@@ -260,19 +260,15 @@
                                                 <div class="sub-main-w3">   
                                                     <h2>Foodgram Sign Up</h2>
                                                     <form action="register" method="post">
+                                                            {{csrf_field()}}
                                                             <div class="input-group-prepend" style="margin-top: 30px"> 
                                                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                                                <input placeholder="Fullname" name="fullname" type="text" required="" style="width: 344px">
+                                                                <input placeholder="Fullname" name="name" type="text" required="" style="width: 344px">
                                                             </div>                                                             
-                 
-                                                            <div class="input-group-prepend" style="margin-top: 30px">
-                                                                <span class="input-group-text"><i class="fas fa-users"></i></span>
-                                                                <input placeholder="Username" name="username" type="text" required="" style="width: 344px"> 
-                                                            </div>
-                                                               
+                
                                                             <div class="input-group-prepend" style="margin-top: 30px">
                                                                 <span class="input-group-text"><i class="fa fa-envelope fa"></i></span>
-                                                                  <input style="width: 344px" placeholder="Email" name="mail" type="email" required=""> 
+                                                                  <input style="width: 344px" placeholder="Email" name="email" type="email" required=""> 
                                                             </div>
 {{--                                                           
                                                           <div class="input-group-prepend">
@@ -283,7 +279,7 @@
                                                           </div> --}}
                                                             <div class="input-group-prepend" style="margin-top: 30px">
                                                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
-                                                                  <input  style="width: 344px" placeholder="Password" name="Password" type="password" required="">
+                                                                  <input  style="width: 344px" placeholder="Password" name="password" type="password" required="">
                                                             </div>
                                                             
 

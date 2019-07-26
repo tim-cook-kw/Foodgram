@@ -29,7 +29,7 @@ Route::get('homeblog', 'HomeController@blog') ->name('blog.index');
 Route::get('homesingleblog/{id}', 'HomeController@singleblog') ->name('singleblog.index');
 
 Route::get('homerecipe', 'HomeController@recipe') ->name('recipe.index');
-
+Route::get('logout','HomeController@logout')->name('logout.index');
 Route::get('homesinglerecipe/{id}', 'HomeController@singlerecipe') ->name('singlerecipe.index');
 Auth::routes();
 
