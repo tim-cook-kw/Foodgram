@@ -13,9 +13,9 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
                         <h2 class="block-title text-center">
-						Hottest Recipes at Foodgram	
+						Resep Terbaik di Foodgram	
 					</h2>
-                        <p class="title-caption text-center">There are many variations recipes food and drink of Foodgram </p>
+                        <p class="title-caption text-center">Terdapat berbagai macam menu variasi makanan dan minuman dari Foodgram </p>
                     </div>
 
 <section class="hot-recipes-var2 ext-var3 corner-bg-var">
@@ -33,7 +33,7 @@
                                     <div class="intro-inner ">
                                         <h3><a href="#">pasto pizza with fillas cheese toppings</a></h3>
                                         <p>
-                                            {!! str_limit($item->description, $limit = 150, $end = '...')!!}
+                                            {!! str_limit($item->description, $limit = 30, $end = '...')!!}
                                         </p>
                                         <a class="read-more" href="{{route('singlerecipe.index',['id ' => $item->title])}}">Learn more</a>
                                     </div>
@@ -82,7 +82,7 @@
                                         </div>
                                         <div class="blog-dit">
                                             <article class="col-single text-center">
-                                                <h3 style="margin-top: -20px"><a href="#">{{$item->title}}</a></h3>
+                                                <h3><a href="#">{{$item->title}}</a></h3>
                                                 <div class="short-separator"></div>
                                                 <ul class="news-post-meta post-meta">
                                                     <li class="author"><a href="#">{{$item->name}}</a></li>
@@ -91,7 +91,7 @@
                                                 <p>
                                                 {!! str_limit($item->description, $limit = 150, $end = '...')!!}
                                                 </p>
-                                                <a class="read-more-bordered" href="{{route('singleblog.index',['id ' => $item->title])}}">read more</a>
+                                                <a class="read-more-bordered" style="margin-bottom:50px" href="{{route('singleblog.index',['id ' => $item->title])}}">read more</a>
                                             </article>
                                         </div>
                                     </div>
