@@ -15,7 +15,11 @@
     <link rel="shortcut icon" href="{{ asset('assets/frontend/images/favicon.ico') }}" type="image/x-icon" />
  
 
-  <!--font awesome stylesheet-->
+    <link rel="stylesheet" href="{{ asset('assets/recipes/css/priority-nav-core.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/recipes/css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Pathway+Gothic+One|Roboto:100,300,400" rel="stylesheet">
+  
+    <!--font awesome stylesheet-->
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/font-awesome.min.css') }}"/>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/bootstrap.min.css') }} ">
@@ -295,10 +299,7 @@
     <script src="{{ asset('assets/frontend/js/custom.js') }}"></script>
 
     <script src="{{ asset('assets/frontend/js/jquery.min.js') }} "></script>
-    <script src="{{ asset('assets/frontend/js/jquery.resizeimagetoparent.min.js') }} "></script>
-    <script src="{{ asset('assets/frontend/js/jquery.dotdotdot.min.js') }}"></script>
     <script src="{{ asset('assets/frontend/js/priority-nav.js') }} "></script>
-    <script src="{{ asset('assets/frontend/js/common.js') }} "></script>
 
 
     
@@ -320,6 +321,11 @@
 
     <script src="{{ asset('assets/contact/vendor/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/contact/js/mail.js') }}"></script>
+
+    <script src="{{ asset('assets/recipes/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/recipes/js/jquery.resizeimagetoparent.min.js') }}"></script>
+    <script src="{{ asset('assets/recipes/js/jquery.dotdotdot.min.js"') }}"></script>
+    <script src="{{ asset('assets/recipes/js/common.js') }}"></script>
 
 
 @stack('js')

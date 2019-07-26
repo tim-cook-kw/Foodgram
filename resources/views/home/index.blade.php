@@ -74,7 +74,7 @@
                             <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
                                 <div class="col-md-6 col-sm-6">
                                     <div class="blog-block">
-                                        <div class="blog-img-box">
+                                        <div class="blog-img-box" style="padding:20px; margin-top:20px; margin-bottom:20px">
                                             <img src="{{ asset($item->image) }}" alt="" />
                                             <div class="overlay">
                                                 <a href=""><i class="fa fa-link" aria-hidden="true"></i></a>
