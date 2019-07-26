@@ -30,7 +30,20 @@ class HomeController extends Controller
     
     public function index()
     {
-        return view('home.index');
+        $latestnewsdata = DB::table('article')
+        ->join('users', 'users.id', '=', 'article.created_by')
+        ->select('article.*', 'users.name')
+        ->orderBy('created_at')
+
+        ->limit(3)
+        ->get();
+        $bestrecipe = DB::table('article')
+        ->join('users', 'users.id', '=', 'article.created_by')
+        ->select('article.*', 'users.name')
+        ->where('article.id_category','=',4)
+        ->limit(4)
+        ->get();
+        return view('home.index',['article' => $latestnewsdata,'receipe' => $bestrecipe]);
     }
 
     public function blog()
@@ -55,12 +68,12 @@ class HomeController extends Controller
         $articledata = DB::table('article')
                 ->join('users', 'users.id', '=', 'article.created_by')
                 ->select('article.*', 'users.name')
-                ->where('article.id_category','=',3)
+                ->where('article.id_category','=',4)
                 ->paginate(12);
         $bestrecipe = DB::table('article')
                 ->join('users', 'users.id', '=', 'article.created_by')
                 ->select('article.*', 'users.name')
-                ->where('article.id_category','=',3)
+                ->where('article.id_category','=',4)
                 ->limit(8)
                 ->get();
         $latestrecipe = DB::table('article')
