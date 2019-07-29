@@ -44,6 +44,8 @@ class ArticleApiController extends Controller
             $articleObject = new ArticleModel();
             $articleObject->title = $request->judul;
             $articleObject->description = $request->description;
+            $articleObject->ingredient = $request->ingredient;
+            $articleObject->direction = $request->direction;
             $articleObject->id_category = $request->category;
             $articleObject->slug = $request->slug;
             $articleObject->image =  'imagearticle/'.$imagepath->getClientOriginalName();
@@ -56,6 +58,8 @@ class ArticleApiController extends Controller
             $articleObject->description = $request->description;
             $articleObject->id_category = $request->category;
             $articleObject->slug = $request->slug;
+            $articleObject->ingredient = $request->ingredient;
+            $articleObject->direction = $request->direction;
             $articleObject->created_by = '1';
             $articleObject->save();
         }
@@ -98,6 +102,8 @@ class ArticleApiController extends Controller
             $articleObject->id_category = $request->category;
             $articleObject->slug = $request->slug;
             $articleObject->created_by = '1';
+            $articleObject->ingredient = $request->ingredient;
+            $articleObject->direction = $request->direction;
             $articleObject->image =  'imagearticle/'.$imagepath->getClientOriginalName();
             $path = $request->file('image')->storeAs('imagearticle', $imagepath->getClientOriginalName());
             $articleObject->save();
@@ -106,6 +112,8 @@ class ArticleApiController extends Controller
             $articleObject->title = $request->judul;
             $articleObject->description = $request->description;
             $articleObject->id_category = $request->category;
+            $articleObject->ingredient = $request->ingredient;
+            $articleObject->direction = $request->direction;
             $articleObject->slug = $request->slug;
             $articleObject->created_by = '1';
             

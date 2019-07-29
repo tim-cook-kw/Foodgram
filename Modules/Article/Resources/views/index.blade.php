@@ -64,6 +64,18 @@
                                                <textarea class="form-control" id="description" name="description"></textarea>
                                             </div>
                                         </div>
+                                        <label for="image">ingredient</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                               <textarea class="form-control" id="ingredient" name="ingredient"></textarea>
+                                            </div>
+                                        </div>
+                                        <label for="image">direction</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                               <textarea class="form-control" id="direction" name="direction"></textarea>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="submit" class="btn btn-primary">Save Change</button>
@@ -117,6 +129,18 @@
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <textarea class="form-control" name="descriptionedit" id="descriptionedit"></textarea>
+                                            </div>
+                                        </div>
+                                        <label for="image">ingredient</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <textarea class="form-control" name="ingredientedit" id="ingredientedit"></textarea>
+                                            </div>
+                                        </div>
+                                        <label for="image">direction</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <textarea class="form-control" name="directionedit" id="directionedit"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -180,6 +204,8 @@
                     $( '#juduledit' ).val(data.title);
                     $( '#slugedit' ).val(data.slug);
                     $( '#descriptionedit' ).val(data.description);
+                    $( '#ingredientedit' ).val(data.ingredient);
+                    $( '#directionedit' ).val(data.direction);
                     $( '#categoryedit' ).val(data.id_category);
                     $( '#idarticle' ).val(data.id_article);
                 }
@@ -215,6 +241,22 @@
                 heightMin: 100,
                 heightMax: 200
             })
+            new FroalaEditor('#ingredient', {
+                heightMin: 100,
+                heightMax: 200
+            })
+            new FroalaEditor('#ingredientedit', {
+                heightMin: 100,
+                heightMax: 200
+            })
+            new FroalaEditor('#direction', {
+                heightMin: 100,
+                heightMax: 200
+            })
+            new FroalaEditor('#directionedit', {
+                heightMin: 100,
+                heightMax: 200
+            })
             $('form[id="formarticle"]').validate({
                 rules: {
                     judul: 'required',
@@ -232,6 +274,8 @@
                     data.append( 'judul', $( '#judul' ).val());
                     data.append( 'description', $( '#description' ).val());
                     data.append( 'slug', $( '#slug' ).val());
+                    data.append( 'ingredient', $( '#ingredient' ).val());
+                    data.append( 'direction', $( '#direction' ).val());
                     data.append( 'category', $( '#category' ).val());
                     data.append( 'image', $( '#image' )[0].files[0]);
                     $.ajax({
@@ -275,6 +319,8 @@
                     var id = $('#idarticle').val();
                     data.append('_method', 'PUT');
                     data.append( 'judul', $( '#juduledit' ).val());
+                    data.append( 'ingredient', $( '#ingredientedit' ).val());
+                    data.append( 'direction', $( '#directionedit' ).val());
                     data.append( 'slug', $( '#slugedit' ).val());
                     data.append( 'description', $( '#descriptionedit' ).val());
                     data.append( 'category', $( '#categoryedit' ).val());
